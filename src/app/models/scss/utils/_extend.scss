@@ -1,0 +1,40 @@
+$backgroundColor: rgba(49, 28, 141, 0.651);
+$buttonPadding: 5px;
+
+%panel {
+  border: 1px solid black;
+  background-color: yellow;
+  margin: 5px;
+  color: black;
+  font-size: 30px;
+}
+%button {
+  border: 1px solid black;
+  padding: $buttonPadding;
+  background: $backgroundColor;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+.first-panel {
+  @include border-radius(10px);
+  @extend %panel;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.second-panel {
+  @include border-radius(30px);
+  @extend %panel;
+  font-size: 24px;
+  padding: 20px;
+  font-weight: bold;
+}
+button {
+  @extend %button;
+  padding: $buttonPadding + 30px;
+  background: $backgroundColor;
+}

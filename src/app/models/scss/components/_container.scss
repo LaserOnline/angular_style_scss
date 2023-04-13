@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  .div1 {
+    width: 400px / 960px * 100%;
+    background: red;
+    float: left;
+  }
+  .div2 {
+    width: 400px / 960px * 100%;
+    background: green;
+    float: left;
+  }
+}
+
+.clear {
+  clear: both;
+}
